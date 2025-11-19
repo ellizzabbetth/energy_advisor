@@ -11,3 +11,4 @@ pandas>=2.2.3
 python-dotenv>=1.1.1
 sqlalchemy>=2.0.41
 ragas>=0.2.14
+certifi>0.1.0
