@@ -8,7 +8,35 @@ Python version 3.9.2
 python -m venv .venv   
 .venv\Scripts\activate   
 
+
+https://www.youtube.com/watch?v=15AI-2_C51w
+VS Code's terminal using a different python interpreter than the one you've selected
+https://stackoverflow.com/questions/48135624/how-can-i-change-the-python-version-in-visual-studio-code
+
 ## Folder Structure
+The error "ModuleNotFoundError: No module named 'sqlalchemy'" in Jupyter Notebook, despite SQLAlchemy appearing as installed, typically occurs due to a mismatch between the Python environment where SQLAlchemy was installed and the environment Jupyter Notebook is using.
+ This often happens when packages are installed in a different Python version or virtual environment than the one Jupyter is running on.
+
+To resolve this, first verify the Python interpreter Jupyter is using by running sys.executable in a notebook cell. Compare this path with the one used to install SQLAlchemy. If they differ, the package was installed in a different environment.
+ For example, if Jupyter is using a system Python while SQLAlchemy was installed via a user-specific pip, the notebook won't find it.
+ 
+cd project
+python -m venv .venv
+.venv\Scripts\activate
+cd ../
+pip install -r requirements.txt
+cd ecohome_solution
+pip install -r requirements.txt
+python --version
+
+
+How to use pip for pyenv?
+# Source - https://stackoverflow.com/a
+# Posted by jmh
+# Retrieved 2025-11-20, License - CC BY-SA 4.0
+
+pyenv local 2.7.14
+pip install -r requirements.txt
 
 ### Lesson Folder
 
